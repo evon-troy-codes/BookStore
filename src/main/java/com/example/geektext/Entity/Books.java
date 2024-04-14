@@ -4,8 +4,6 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-
-
 @Setter
 @Entity
 @Table(name = "Books")
@@ -54,5 +52,9 @@ public class Books {
     @ManyToOne
     @JoinColumn(name = "AuthorID")
     private Author author;
+
+    @Getter
+    @Column(name = "Rating")
+    private Integer rating;
 
 }
